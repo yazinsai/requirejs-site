@@ -1,0 +1,30 @@
+
+@mixin type-setting($level: 0) {
+  font-size: type-scale($level);
+  line-height: line-height($level);
+}
+
+@function type-scale($level) {
+  @return map-get($type-scale, $level);
+}
+
+@function line-height($level) {
+  @return map-get($line-heights, $level);
+}
+
+@function start-font(
+  $name: 'primary',
+  $variant: $start-font-key
+) {
+  $font: null;
+
+  // Get the font spectrum
+  $font-spectrum: map-get($start-fonts, $name);
+
+  // Get the color variant
+  @if $font-spectrum {
+    $font: map-get($font-spectrum, $variant);
+  }
+
+  @return $font;
+}

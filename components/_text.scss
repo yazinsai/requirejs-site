@@ -1,0 +1,18 @@
+%header {
+  font-family: start-font('primary', 'bold');
+  @include type-setting(2);
+}
+
+h1, h2, h3 {
+  &, * {
+    @extend %header;
+  }
+}
+
+em {
+  font-family: start-font('primary', 'italic');
+}
+
+.center {
+  text-align: center;
+}

@@ -1,0 +1,48 @@
+// Button settings
+$button-padding: $input-padding;
+$button-border-width: $input-border-width;
+$button-border-radius: $input-border-radius;
+
+%button {
+  display: inline-block;
+  padding: $button-padding 2*$button-padding;
+  @include type-setting(0);
+  height: 2 * line-height(0);
+  font-weight: bold;
+  border-width: $button-border-width;
+  border-style: solid;
+  border-radius: $button-border-radius;
+  color: start-color('foreground', 'lighter');
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+.start-button {
+  @extend %button;
+  background-color: start-color('primary');
+  border-color: start-color('primary', 'dark');
+
+  &:hover {
+    background-color: start-color('primary', 'light');
+    border-color: start-color('primary', 'light');
+  }
+
+  &.secondary {
+    background-color: start-color('secondary');
+    border-color: start-color('secondary', 'dark');
+
+    &:hover {
+      background-color: start-color('secondary', 'dark');
+      border-color: start-color('secondary', 'light');
+    }
+  }
+
+  &.transparent {
+    background-color: start-color('primary', $opacity: 'light');
+  }
+
+  &.large {
+    @include type-setting(1);
+    height: 1.4 * line-height(1);
+  }
+}

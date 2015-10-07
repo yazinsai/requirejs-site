@@ -1,0 +1,38 @@
+body {
+  nav.navbar-main {
+    // Set the font
+    font-family: start-font('primary');
+    color: start-color('foreground');
+
+    background-color: start-color('background');
+    margin-top: 7px;
+    padding-bottom: 4px;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    font-size: 16px;
+
+    // Logo
+    .navbar-brand {
+      img {
+        max-width: 100px;
+        position: relative;
+        top: -5px;
+      }
+    }
+
+    // Active link
+    .navbar-nav {
+      li a {
+        font-family: start-font('primary', 'medium');
+      }
+
+      li.active {
+        a, a:hover, a:active {
+          color: start-color('foreground', 'light');
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}

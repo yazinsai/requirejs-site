@@ -1,0 +1,6 @@
+
+* {
+  @include type-setting(0);
+  font-family: start-font('primary', 'regular');
+  color: start-color('foreground');
+}

@@ -1,0 +1,31 @@
+$start-color-key: 'base' !default;
+
+$start-colors: (
+  'primary': (
+    'base': #44aa44,
+    'light': #6EC86E,
+    'dark': #0F720F
+  ),
+  'secondary': (
+    'base': #3d4146,
+    'light': #cdcdcd,
+    'dark': #1B1D1F
+  ),
+  'foreground': (
+    'base': #3d4146,
+    'light': #595D63,
+    'lighter': #ffffff,
+    'dark': #1B1D1F,
+    'darker': #131820
+  ),
+  'background': (
+    'base': #ffffff,
+    'light': #f5f5f5,
+    'dark': #3a4045
+  )
+);
+
+$start-opacity: (
+  'light': 0.8, // opacity used with lighter colors
+  'dark': 0.4,  // opacity used with darker colors
+);

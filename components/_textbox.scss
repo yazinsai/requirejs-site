@@ -1,0 +1,20 @@
+$text-padding: $input-padding;
+$text-border-width: $input-border-width;
+$text-border-color: $input-border-color;
+$text-border-radius: $input-border-radius;
+
+%text {
+  display: inline-block;
+  padding: $text-padding;
+  @include type-setting(0);
+  height: 2 * line-height(0);
+  border-radius: $text-border-radius;
+  border-width: $text-border-width;
+  border-color: $text-border-color;
+  border-style: solid;
+}
+
+.start-text {
+  @extend %text;
+
+}
