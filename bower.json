@@ -1,0 +1,18 @@
+{
+  "name": "Start - Style Guide",
+  "version": "0.0.1",
+  "authors": [
+    "Yazin <yazin@payfort.com>"
+  ],
+  "description": "Contains the SASS files to meet all our styling needs",
+  "main": "main.scss",
+  "license": "MIT",
+  "homepage": "https://start.payfort.com/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
