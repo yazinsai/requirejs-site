@@ -1,0 +1,9 @@
+$panel-border-width: 2px;
+$panel-outer-margin: 5px;
+
+.start-panel {
+  border: $panel-border-width;
+  border-color: start-color('secondary', 'light');
+  border-style: solid;
+  margin: $panel-outer-margin;
+}
