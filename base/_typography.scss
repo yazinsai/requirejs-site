@@ -27,10 +27,3 @@ $start-fonts: (
     'bold': 'brandon_textbold'
   )
 );
-
-.heading-1 {
-  @include type-setting(2);
-  font-family: start-font('primary','bold');
-}
-.sub-heading { @include type-setting(-1); }
-.paragraph { @include type-setting(0); }

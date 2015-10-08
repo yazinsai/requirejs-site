@@ -3,6 +3,10 @@
   @include type-setting(2);
 }
 
+* {
+  font-family: start-font('primary');
+}
+
 h1, h2, h3 {
   &, * {
     @extend %header;
