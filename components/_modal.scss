@@ -15,7 +15,7 @@ $modal-backdrop: start-color('background');
     box-shadow: none;
 
     .modal-header {
-      @extend .heading-1;
+      @extend h1;
     }
 
     .modal-body {
