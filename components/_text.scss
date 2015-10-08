@@ -11,6 +11,14 @@ h1, h2, h3 {
   &, * {
     @extend %header;
   }
+
+  // Primary page header
+  &.page-header {
+    color: start-color('primary');
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+    border: 0;
+  }
 }
 
 em {
