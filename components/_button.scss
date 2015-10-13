@@ -15,6 +15,16 @@ $button-border-radius: $input-border-radius;
   color: start-color('foreground', 'lighter');
   text-decoration: none !important;
   cursor: pointer;
+
+  &.large {
+    @include type-setting(1);
+    height: 1.4 * line-height(1);
+  }
+
+  &.small {
+    @include type-setting(-1);
+    height: 1.5 * line-height(-1);
+  }
 }
 
 .start-button {
@@ -39,10 +49,5 @@ $button-border-radius: $input-border-radius;
 
   &.transparent {
     background-color: start-color('primary', $opacity: 'light');
-  }
-
-  &.large {
-    @include type-setting(1);
-    height: 1.4 * line-height(1);
   }
 }
