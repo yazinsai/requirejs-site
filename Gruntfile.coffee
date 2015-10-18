@@ -11,6 +11,7 @@ module.exports = (grunt) ->
   grunt.registerTask 'default', [ 'build', 'connect', 'watch' ]
   grunt.initConfig
     demodir: 'demo'
+    livereloadPort: 35730
     pkg: grunt.file.readJSON('package.json')
     slim:
       options:
@@ -34,7 +35,7 @@ module.exports = (grunt) ->
     watch:
       livereload:
         options:
-          livereload: true
+          livereload: '<%= livereloadPort %>'
         files: ['<%= demodir %>/**/*']
       css:
         files: '**/*.scss'
@@ -50,7 +51,7 @@ module.exports = (grunt) ->
     connect:
       options:
         port: 9000
-        livereload: 35729
+        livereload: '<%= livereloadPort %>'
         hostname: 'localhost'
       livereload:
         options:
