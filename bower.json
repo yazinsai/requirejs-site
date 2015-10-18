@@ -1,8 +1,8 @@
 {
   "name": "Start - Style Guide",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "authors": [
-    "Yazin <yazin@payfort.com>"
+    "Team Start <start@payfort.com>"
   ],
   "description": "Contains the SASS files to meet all our styling needs",
   "main": "main.scss",
