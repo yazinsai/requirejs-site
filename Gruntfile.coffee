@@ -5,9 +5,10 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-clean'
+  grunt.loadNpmTasks 'grunt-open'
   grunt.loadNpmTasks 'grunt-slim'
   grunt.registerTask 'default', [ 'watch' ]
-  grunt.registerTask 'build', [ 'clean', 'copy', 'slim', 'sass' ]
+  grunt.registerTask 'build', [ 'clean', 'copy', 'slim', 'sass', 'open' ]
   grunt.initConfig
     demodir: 'demo'
     pkg: grunt.file.readJSON('package.json')
@@ -35,6 +36,10 @@ module.exports = (grunt) ->
       slim:
         files: '<%= demodir %>/**/*.slim'
         tasks: [ 'slim' ]
+    open:
+      demo:
+        path: '<%= demodir %>/index.html'
+        app: 'Google Chrome'
 
     ###
     You should be using the below 'copy' block for your project as well. It's
