@@ -5,10 +5,10 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-clean'
-  grunt.loadNpmTasks 'grunt-open'
+  grunt.loadNpmTasks 'grunt-contrib-connect'
   grunt.loadNpmTasks 'grunt-slim'
-  grunt.registerTask 'default', [ 'watch' ]
-  grunt.registerTask 'build', [ 'clean', 'copy', 'slim', 'sass', 'open' ]
+  grunt.registerTask 'build', [ 'clean', 'copy', 'slim', 'sass' ]
+  grunt.registerTask 'default', [ 'build', 'connect', 'watch' ]
   grunt.initConfig
     demodir: 'demo'
     pkg: grunt.file.readJSON('package.json')
@@ -30,16 +30,26 @@ module.exports = (grunt) ->
           '<%= demodir %>/main.css': 'main.scss'
         }
     watch:
+      livereload:
+        options:
+          livereload: true
+        files: ['<%= demodir %>/**/*']
       css:
         files: 'main.scss'
         tasks: [ 'sass' ]
       slim:
-        files: '<%= demodir %>/**/*.slim'
+        files: '**/*.slim'
         tasks: [ 'slim' ]
-    open:
-      demo:
-        path: '<%= demodir %>/index.html'
-        app: 'Google Chrome'
+
+    connect:
+      options:
+        port: 9000
+        livereload: 35729
+        hostname: 'localhost'
+      livereload:
+        options:
+          open: true
+          base: '<%= demodir %>'
 
     ###
     You should be using the below 'copy' block for your project as well. It's
