@@ -11,7 +11,7 @@ $row-padding: 6px;
 
       th, td {
         padding: 2*$row-padding $row-padding;
-        font-family: start-font('primary', 'bold');
+        font-family: start-font('primary', 'medium');
         text-transform: uppercase;
       }
     }
@@ -32,4 +32,14 @@ $row-padding: 6px;
 
 .start-table {
   @extend %table;
+
+  &.clickable {
+    tbody > tr {
+      cursor: pointer;
+
+      &:hover {
+        background-color: start-color('primary', 'lighter');
+      }
+    }
+  }
 }

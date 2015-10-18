@@ -21,6 +21,7 @@ module.exports = (grunt) ->
         files: {
           '<%= demodir %>/index.html': 'demo.slim'
         }
+
     sass:
       options:
         style: 'compressed'
@@ -29,18 +30,23 @@ module.exports = (grunt) ->
         files: {
           '<%= demodir %>/main.css': 'main.scss'
         }
+
     watch:
       livereload:
         options:
           livereload: true
         files: ['<%= demodir %>/**/*']
       css:
-        files: 'main.scss'
+        files: '**/*.scss'
         tasks: [ 'sass' ]
       slim:
         files: '**/*.slim'
         tasks: [ 'slim' ]
 
+    clean:
+      all: files: [{ '<%= demodir %>/ ' }]
+
+    # Launches our web server for autoreload preview
     connect:
       options:
         port: 9000
@@ -71,6 +77,4 @@ module.exports = (grunt) ->
           src: ['images/**'],
           dest: '<%= demodir %>',
         }]
-    clean:
-      all: files: [{ '<%= demodir %>/ ' }]
   return
