@@ -35,6 +35,8 @@ html
       button.start-button.large button.start-button.large
       button.start-button.large.secondary button.start-button.large.secondary
       
+      button.start-button.block button.start-button.block
+      
       h1 Modals
       
       /! Button trigger modal
@@ -59,7 +61,12 @@ html
       
       .start-panel
         .panel-heading
-          h3.panel-title Panel title
+          .panel-title .panel-heading &gt; .panel-title
+        .panel-body
+          | Panel content
+      
+      .start-panel
+        .panel-heading .panel-heading (without .panel-title)
         .panel-body
           | Panel content
 

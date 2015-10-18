@@ -25,6 +25,12 @@ $button-border-radius: $input-border-radius;
     @include type-setting(-1);
     height: 1.5 * line-height(-1);
   }
+
+  &.block {
+    // Full-width
+    display: block;
+    width: 100%;
+  }
 }
 
 .start-button {
