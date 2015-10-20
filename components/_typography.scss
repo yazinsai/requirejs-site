@@ -1,10 +1,12 @@
-%header {
-  font-family: start-font('primary', 'bold');
-  @include type-setting(2);
-}
-
 * {
   font-family: start-font('primary');
+}
+
+/**
+ * Header stuff
+ */
+%header {
+  font-family: start-font('primary', 'bold');
 }
 
 h1, h2, h3 {
@@ -20,6 +22,10 @@ h1, h2, h3 {
     border: 0;
   }
 }
+
+h1 { @include type-setting(2); }
+h2 { @include type-setting(1); }
+h3 { @include type-setting(0); }
 
 em {
   font-family: start-font('primary', 'italic');
