@@ -37,3 +37,7 @@ em {
 .align-right {
   text-align: right;
 }
+.nobreak {
+  /* no line breaks across this string */
+  white-space: nowrap;
+}

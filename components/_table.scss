@@ -43,8 +43,11 @@ $row-padding: 6px;
   }
 
   &.borderless {
-    tbody {
+    thead {
+      background-color: transparent;
+    }
 
+    tbody {
       tr {
         border: 0;
       }
