@@ -19,7 +19,6 @@ $row-padding: 6px;
 
   tbody {
 
-
     tr {
       border-bottom: 1px solid start-color('secondary', 'light');
 
@@ -42,4 +41,18 @@ $row-padding: 6px;
       }
     }
   }
+
+  &.borderless {
+    tbody {
+
+      tr {
+        border: 0;
+      }
+    }
+  }
+
+  &.block {
+    width: 100%;
+  }
+
 }
