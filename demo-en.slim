@@ -1,0 +1,138 @@
+/ Demo
+/ ====
+/ This is the demo file, used to show you the different components and how
+/ they look in real-life.
+
+html
+  head
+    link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"
+    script src="https://code.jquery.com/jquery-2.1.4.min.js"
+    script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
+    
+    / Always load after Bootstrap
+    link rel="stylesheet" type="text/css" href="main.css"
+    
+  body
+    .container
+      h1 Typography
+      
+      h1.page-header h1.page-header
+      h1 h1
+      h2 h2
+      h3 h3
+      h4 h4
+      h5 h5
+      h6 h6
+      p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      
+      h1 Buttons
+
+      button.start-button.small button.start-button.small
+      button.start-button.small.secondary button.start-button.small.secondary
+      br
+      button.start-button button.start-button
+      button.start-button.secondary button.start-button.secondary
+      br
+      button.start-button.large button.start-button.large
+      button.start-button.large.secondary button.start-button.large.secondary
+      
+      button.start-button.block button.start-button.block
+      
+      h1 Modals
+      
+      /! Button trigger modal
+      button.start-button data-target="#myModal" data-toggle="modal" type="button" 
+        | Launch demo modal
+      /! Modal
+      #myModal.modal.start-modal.fade aria-labelledby="myModalLabel" role="dialog" tabindex="-1" 
+        .modal-dialog role="document" 
+          .modal-content
+            .modal-header
+              button.close aria-label="Close" data-dismiss="modal" type="button"
+                span aria-hidden="true"  &times;
+              h4#myModalLabel.modal-title Modal title
+            .modal-body
+              | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            .modal-footer
+              button.start-button.secondary data-dismiss="modal" type="button"  Close
+              button.start-button type="button"  Save changes
+
+      
+      h1 Panels
+      
+      .start-panel
+        .panel-heading
+          .panel-title .panel-heading &gt; .panel-title
+        .panel-body
+          | Panel content
+      
+      .start-panel
+        .panel-heading .panel-heading (without .panel-title)
+        .panel-body
+          | Panel content
+
+      h1 Form Elements
+      
+      h3 Select Box
+      select.start-select
+        option value="" Please pick one
+        option value="" Please pick me
+        option value="" Please pick me
+        option value="" Please pick me
+      
+      h3 Textbox
+      
+      input.start-text type="text" placeholder="input.start-text"
+      
+      h1 Tables
+      
+      h3 table.start-table
+      table.start-table
+        thead
+          tr
+            th Head 1
+            th Head 2
+            th Head 3
+        tbody
+          tr
+            td Row 1
+            td Row 1
+            td Row 1
+          tr
+            td Row 2
+            td Row 2
+            td Row 2
+
+      h3 table.start-table.clickable
+      table.start-table.clickable
+        thead
+          tr
+            th Head 1
+            th Head 2
+            th Head 3
+        tbody
+          tr
+            td Row 1
+            td Row 1
+            td Row 1
+          tr
+            td Row 2
+            td Row 2
+            td Row 2
+            
+      h3 table.start-table.borderless
+      table.start-table.borderless
+        thead
+          tr
+            th Head 1
+            th Head 2
+            th Head 3
+        tbody
+          tr
+            td Row 1
+            td Row 1
+            td Row 1
+          tr
+            td Row 2
+            td Row 2
+            td Row 2
