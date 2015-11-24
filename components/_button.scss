@@ -15,6 +15,7 @@ $button-border-radius: $input-border-radius;
   color: start-color('foreground', 'lighter');
   text-decoration: none !important;
   cursor: pointer;
+  text-align: center;
 
   &.large {
     @include type-setting(1);

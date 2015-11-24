@@ -20,7 +20,9 @@ module.exports = (grunt) ->
         bundleExec: false
       dist:
         files: {
-          '<%= demodir %>/index.html': 'demo.slim'
+          '<%= demodir %>/index.html': 'demo.slim',
+          '<%= demodir %>/demo-ar.html': 'demo-ar.slim',
+          '<%= demodir %>/demo-en.html': 'demo-en.slim'
         }
 
     sass:

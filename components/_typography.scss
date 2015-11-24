@@ -1,34 +1,68 @@
-* {
-  font-family: start-font('primary');
-}
 
-/**
- * Header stuff
- */
-%header {
-  font-family: start-font('primary', 'bold');
-}
-
-h1, h2, h3 {
-  &, * {
-    @extend %header;
+html[dir="rtl"] {
+  // Arabic, and other RTL languages
+  * {
+    font-family: start-font('arabic');
   }
 
-  // Primary page header
-  &.page-header {
-    color: start-color('primary');
-    text-transform: uppercase;
-    margin: 0 0 20px 0;
-    border: 0;
+  %header-rtl {
+    font-family: start-font('arabic', 'bold');
   }
+
+  h1, h2, h3 {
+    &, * {
+      @extend %header-rtl;
+    }
+
+    // Primary page header
+    &.page-header {
+      color: start-color('primary');
+      text-transform: uppercase;
+      margin: 0 0 20px 0;
+      border: 0;
+    }
+  }
+
+  h1 { @include type-setting(2); }
+  h2 { @include type-setting(1); }
+  h3 { @include type-setting(0); }
+
+  em {
+    font-family: start-font('arabic', 'italic');
+  }
+
 }
+html:not([dir]) {
+  // Left to right languages
+  * {
+    font-family: start-font('primary');
+  }
 
-h1 { @include type-setting(2); }
-h2 { @include type-setting(1); }
-h3 { @include type-setting(0); }
+  %header {
+    font-family: start-font('primary', 'bold');
+  }
 
-em {
-  font-family: start-font('primary', 'italic');
+  h1, h2, h3 {
+    &, * {
+      @extend %header;
+    }
+
+    // Primary page header
+    &.page-header {
+      color: start-color('primary');
+      text-transform: uppercase;
+      margin: 0 0 20px 0;
+      border: 0;
+    }
+  }
+
+  h1 { @include type-setting(2); }
+  h2 { @include type-setting(1); }
+  h3 { @include type-setting(0); }
+
+  em {
+    font-family: start-font('primary', 'italic');
+  }
 }
 
 .center {
