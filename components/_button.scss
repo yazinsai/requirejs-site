@@ -34,7 +34,7 @@ $button-border-radius: $input-border-radius;
   }
 }
 
-.start-button {
+.start-button, .btn {
   @extend %button;
   background-color: start-color('primary');
   border-color: start-color('primary', 'dark');
