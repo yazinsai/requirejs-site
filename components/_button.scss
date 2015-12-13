@@ -5,7 +5,7 @@ $button-border-radius: $input-border-radius;
 
 %button {
   display: inline-block;
-  padding: $button-padding 2*$button-padding;
+  padding: $button-padding+1 2*$button-padding;
   @include type-setting(0);
   height: 2 * line-height(0);
   font-weight: bold;
@@ -36,13 +36,6 @@ $button-border-radius: $input-border-radius;
 
 .start-button, .btn {
   @extend %button;
-  background-color: start-color('primary');
-  border-color: start-color('primary', 'dark');
-
-  &:hover {
-    background-color: start-color('primary', 'light');
-    border-color: start-color('primary', 'light');
-  }
 
   &.secondary {
     background-color: start-color('secondary');

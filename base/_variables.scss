@@ -34,3 +34,6 @@ $start-opacity: (
 );
 
 $brand-primary:         start-color('primary');
+
+$btn-primary-border:             darken($brand-primary, 15%);
+
