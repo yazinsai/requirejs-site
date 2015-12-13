@@ -37,3 +37,8 @@ $brand-primary:         start-color('primary');
 
 $btn-primary-border:             darken($brand-primary, 15%);
 
+$link-color: #337AB7;
+
+p > a {
+  text-decoration: underline;
+}
