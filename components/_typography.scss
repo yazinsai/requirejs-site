@@ -75,3 +75,7 @@ html:not([dir]) {
   /* no line breaks across this string */
   white-space: nowrap;
 }
+
+p > a {
+  text-decoration: underline;
+}
