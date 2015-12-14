@@ -34,9 +34,16 @@ $button-border-radius: $input-border-radius;
   }
 }
 
-.start-button, .btn {
+.start-button {
   @extend %button;
 
+  background-color: start-color('primary');
+  border-color: start-color('primary', 'dark');
+
+  &:hover {
+    background-color: start-color('primary', 'light');
+    border-color: start-color('primary', 'light');
+  }
   &.secondary {
     background-color: start-color('secondary');
     border-color: start-color('secondary', 'dark');
@@ -50,4 +57,8 @@ $button-border-radius: $input-border-radius;
   &.transparent {
     background-color: start-color('primary', $opacity: 'light');
   }
+}
+
+.btn {
+  @extend %button;
 }
