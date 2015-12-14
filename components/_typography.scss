@@ -1,7 +1,7 @@
 
 html[dir="rtl"] {
   // Arabic, and other RTL languages
-  * {
+  body {
     font-family: start-font('arabic');
   }
 
@@ -10,9 +10,7 @@ html[dir="rtl"] {
   }
 
   h1, h2, h3 {
-    &, * {
-      @extend %header-rtl;
-    }
+    @extend %header-rtl;
 
     // Primary page header
     &.page-header {
@@ -34,7 +32,7 @@ html[dir="rtl"] {
 }
 html:not([dir]) {
   // Left to right languages
-  * {
+  body {
     font-family: start-font('primary');
   }
 
@@ -43,9 +41,7 @@ html:not([dir]) {
   }
 
   h1, h2, h3 {
-    &, * {
-      @extend %header;
-    }
+    @extend %header;
 
     // Primary page header
     &.page-header {
