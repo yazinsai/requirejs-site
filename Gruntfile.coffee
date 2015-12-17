@@ -20,9 +20,7 @@ module.exports = (grunt) ->
         bundleExec: false
       dist:
         files: {
-          '<%= demodir %>/index.html': 'demo.slim',
-          '<%= demodir %>/demo-ar.html': 'demo-ar.slim',
-          '<%= demodir %>/demo-en.html': 'demo-en.slim'
+          '<%= demodir %>/index.html': 'demo.slim'
         }
 
     sass:
@@ -60,13 +58,6 @@ module.exports = (grunt) ->
           open: true
           base: '<%= demodir %>'
 
-    ###
-    You should be using the below 'copy' block for your project as well. It's
-    used to copy the shared resources from the style-guide to your particular
-    project .. and includes things like:
-      - fonts
-      - images
-    ###
     copy:
       fonts:
         files: [{
