@@ -5,7 +5,7 @@ $button-border-radius: $input-border-radius;
 
 %button {
   display: inline-block;
-  padding: $button-padding 2*$button-padding;
+  padding: $button-padding+1 2*$button-padding;
   @include type-setting(0);
   height: 2 * line-height(0);
   font-weight: bold;
@@ -36,6 +36,7 @@ $button-border-radius: $input-border-radius;
 
 .start-button {
   @extend %button;
+
   background-color: start-color('primary');
   border-color: start-color('primary', 'dark');
 
@@ -43,7 +44,6 @@ $button-border-radius: $input-border-radius;
     background-color: start-color('primary', 'light');
     border-color: start-color('primary', 'light');
   }
-
   &.secondary {
     background-color: start-color('secondary');
     border-color: start-color('secondary', 'dark');
@@ -57,4 +57,8 @@ $button-border-radius: $input-border-radius;
   &.transparent {
     background-color: start-color('primary', $opacity: 'light');
   }
+}
+
+.btn {
+  @extend %button;
 }
